@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+/msc7tdd/nbproject/private/
+/msc7tdd/library/JDBCExamples/JDBCExamples/nbproject/private/
