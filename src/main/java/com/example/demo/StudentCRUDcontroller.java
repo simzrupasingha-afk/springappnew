@@ -65,8 +65,11 @@ class StudentCRUDcontroller {
         Optional<StudentEntity> existingItemOptional = repository.findById(id);
         if (existingItemOptional.isPresent()) {
             StudentEntity existingItem = existingItemOptional.get();
-            System.out.println("TODO for developer - update logic is unique to entity and must be implemented manually.");
+            //System.out.println("TODO for developer - update logic is unique to entity and must be implemented manually.");
             //existingItem.setSomeField(item.getSomeField());
+                existingItem.setName(item.getName());
+                existingItem.setDob(item.getDob());
+                existingItem.setGpa(item.getGpa());
             return new ResponseEntity<>(repository.save(existingItem), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
